@@ -2,6 +2,25 @@
 
 implementation using Gemini API and LangGraph to analyze legal emails and draft professional replies.
 
+## Assignment Requirements
+
+**Part 1**: `analyze_email(email_text: str) -> dict` - Analyzes raw email and returns structured JSON  
+**Part 2**: `draft_reply(email_text: str, analysis: dict, contract_text: str) -> str` - Drafts professional legal reply
+
+## Assumptions
+
+- Email text is provided in plain text format (not HTML)
+- Contract clauses are provided as plain text snippets
+- Users have valid Gemini API key with sufficient quota
+- Email contains identifiable parties, questions, and reference to an agreement
+- Contract text contains relevant clauses to answer the questions
+
+## Dependencies
+
+- `langgraph` - Workflow orchestration
+- `google-generativeai` - Gemini API client  
+- `python-dotenv` - Environment variables
+
 ## Setup
 
 ### 1. Create `.env` file with your Gemini API key:
@@ -157,20 +176,11 @@ Your Legal Team
 To test different legal scenarios, simply edit `sample_email.txt` and `contract_snippet.txt` with your own email and contract content, then run:
 
 ```bash
-python test.py
+python test_demo.py
 ```
 
-## Dependencies
+---
 
-- `langgraph` - Workflow orchestration
-- `google-generativeai` - Gemini API client
-- `python-dotenv` - Environment variables
-
-## Tech Stack
-
-Python 3.8+ | Gemini API | LangGraph
-
-
-Author - Dibyashakti Moharana
+**Author** - Dibyashakti Moharana
 
 [![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=Dibyashakti&button_colour=FFDD00&font_colour=000000&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/Dibyashakti)
