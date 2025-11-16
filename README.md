@@ -164,7 +164,7 @@ Your Legal Team
 To test different legal scenarios, simply edit `sample_email.txt` and `contract_snippet.txt` with your own email and contract content, then run:
 
 ```bash
-python test_demo.py
+python test.py
 ```
 
 ---
