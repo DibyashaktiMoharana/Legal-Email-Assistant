@@ -2,11 +2,6 @@
 
 implementation using Gemini API and LangGraph to analyze legal emails and draft professional replies.
 
-## Assignment Requirements
-
-**Part 1**: `analyze_email(email_text: str) -> dict` - Analyzes raw email and returns structured JSON  
-**Part 2**: `draft_reply(email_text: str, analysis: dict, contract_text: str) -> str` - Drafts professional legal reply
-
 ## Assumptions
 
 - Email text is provided in plain text format (not HTML)
@@ -18,7 +13,7 @@ implementation using Gemini API and LangGraph to analyze legal emails and draft 
 ## Dependencies
 
 - `langgraph` - Workflow orchestration
-- `google-generativeai` - Gemini API client  
+- `google-generativeai` - Gemini API client
 - `python-dotenv` - Environment variables
 
 ## Setup
@@ -28,7 +23,6 @@ implementation using Gemini API and LangGraph to analyze legal emails and draft 
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
-
 
 ### 2. Create sample files in project root
 
@@ -84,8 +78,6 @@ pip install -r requirements.txt
 python test.py
 ```
 
-
-
 ## Project Structure
 
 ```
@@ -109,8 +101,6 @@ legal_email_assistant/
 - `draft_reply()` - Generates professional legal response
 - `EmailWorkflow` - LangGraph StateGraph coordinating analysis and drafting
 
-
-
 ## Usage
 
 ```python
@@ -119,8 +109,6 @@ from email_assistant import EmailWorkflow
 workflow = EmailWorkflow()
 analysis, draft_reply = workflow.process_email(email_text, contract_text)
 ```
-
-
 
 ## Sample Output
 
